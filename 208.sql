@@ -11,12 +11,13 @@ create table stuInfo
 create table teacherInfo
 (
     id   int  primary key,
-    name varchar(20) not null
+    name varchar(20) not null,
+    classId int
 );
 
 #开启事务
 start transaction;
-insert into teacherInfo(id, name) values (1,'zzy');
+insert into teacherInfo(id, name) values (1,'zzy',1);
 insert into stuInfo(id, name, sex, classId) VALUES (1,'abc','男',1);
 insert into stuInfo(id, name, sex, classId) VALUES (2,'def','男',2);
 insert into stuInfo(id, name, sex, classId) VALUES (3,'xzc','男',2);
